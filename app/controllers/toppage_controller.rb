@@ -8,7 +8,8 @@ class ToppageController < ApplicationController
             redirect_to(root_path, alert: "Empty Keyword!") and return  
         else  
             @keyword = params[:search].downcase 
-            @keyword_results = Course.all.where("lower(course_title) LIKE ? OR lower(topic) LIKE ? OR lower(category) LIKE ?", @keyword, @keyword, @keyword)
+            @keyword_results = Course.all.where("lower(course_title) LIKE :search OR \
+                lower(topic) LIKE :search OR lower(category) LIKE :search", search: "%#{@keyword}%")
         end
     end
 

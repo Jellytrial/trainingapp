@@ -52,7 +52,6 @@ col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2 container-fluid col-center-blo
         <% end %>
     </div>
     <h1></h1>
-    <form role="form">
         <div class="form-group col-md-offset-2 col-md-8"> 
             <!--keyword search -->
             <%= form_tag("/search", :method => :get, class: 'form-inline') do%>
@@ -77,11 +76,10 @@ col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2 container-fluid col-center-blo
                             </li>
                         <% end %>
                     </select>
-                    <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>       
+                    <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search', :name => nil%>       
                 <% end %>
             </div>
         </div>
-    </form>
     </div>
 
 </div>
