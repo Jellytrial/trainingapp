@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<%= link_to 'Delete course', @course, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<p>
+  <strong>Course_ID:</strong>
+  <%= @course.course_id %>
+</p>
+
+<p>
+  <strong>Course title:</strong>
+  <%= @course.course_title %>
+</p>
+
+<p>
+  <strong>Topic:</strong>
+  <%= @course.topic %>
+</p>
+
+<p>
+  <strong>Day length:</strong>
+  <%= @course.day_length %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @course.price %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @course.level_id %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @course.category %>
+</p>
+
+<%= link_to 'Back', courses_path %> |
+<%= link_to 'Edit', edit_course_path(@course) %>

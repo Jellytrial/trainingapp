@@ -1,0 +1,39 @@
+<h3>Search Result</h3>  
+
+<h5>
+<% if @keyword_results %>
+<span> <%= @keyword_results.count %> Courses Found</span>
+<% end %>
+</h5>
+
+<table table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Course_ID</th>
+      <th>Course title</th>
+      <th>Topic</th>
+      <th>Day length</th>
+      <th>Price</th>
+      <th>Level</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @keyword_results.each do |result| %> 
+      <tr>
+        <td><%= link_to result.course_id, result %></td>
+        <td><%= result.course_title %></td>
+        <td><%= result.topic %></td>
+        <td><%= result.day_length %></td>
+        <td><%= result.price %></td>
+        <td><%= result.level_id %></td>
+        <td><%= result.category %></td>
+       
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= link_to 'Back', root_path %>
