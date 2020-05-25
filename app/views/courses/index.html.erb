@@ -19,7 +19,7 @@
   <tbody>
     <% @courses.each do |course| %>
       <tr>
-        <td><%= link_to course.course_id, course %></td>
+        <td><%= link_to course.course_id, course_path(course, course.course_id) %></td>
         <td><%= course.course_title %></td>
         <td><%= course.topic %></td>
         <td><%= course.day_length %></td>
@@ -34,5 +34,5 @@
 
 <br>
 
-<%= link_to 'Back', root_path %> |
-<%= link_to 'New Course', new_course_path %>
+<%= link_to 'Back', root_path, class: "back_btn"%> 
+<%= link_to 'New Course', new_course_path, class: "edit_btn" %>

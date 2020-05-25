@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get 'all'       => 'courses#index'
   get 'search'    => 'toppage#search'
   get 'cate_search' => 'toppage#cate_search'
+  get 'course' => 'courses#show'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
