@@ -64,3 +64,7 @@ gem 'uglifier', '>= 1.3.0'
 
 # gem 'sunspot_rails'
 # gem 'sunspot_solr'
+
+gem 'execjs'
+gem 'jquery-rails'
+gem 'data-confirm-modal'

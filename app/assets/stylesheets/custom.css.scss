@@ -161,3 +161,60 @@ input {
   right: 0;
   margin-top: 130px;
   }
+
+.delete_btn {
+  height:20px;
+  width:150px; 
+  color: #444343 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff;  
+  border: 2px solid #494949 !important;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  }
+
+.delete_btn:hover {
+  color: #ffffff !important;
+  background: #f82121;
+  border-color: #f82121 !important;
+  transition: all 0.4s ease 0s;
+  }
+
+.back_btn {
+  height:25px;
+  width:150px; 
+  color: #444343 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff; 
+  border: 2px solid #494949 !important;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  }
+  
+.back_btn:hover {
+  color: #ffffff !important;
+  background: #2197f8;
+  border-color: #2197f8 !important;
+  transition: all 0.4s ease 0s;
+  }
+
+.edit_btn {
+  height:25px;
+  width:150px; 
+  color: #444343 !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #ffffff; 
+  border: 2px solid #494949 !important;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
+  }
+    
+.edit_btn:hover {
+  color: #ffffff !important;
+  background: #209930;
+  border-color: #209930 !important;
+  transition: all 0.4s ease 0s;
+  }
