@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class Course < ApplicationRecord
-  validates :course_id, :day_length, presence: true
+  validates :day_length, presence: true
+  validates :course_id, uniqueness: true
   validates :course_title, presence: true, format: { with: /\A[a-zA-Z]+\z/,
   message: "only allows letters" }, length: { maximum: 50, too_long: "%{count} characters is the maximum allowed" }
   validates :topic, presence: true, length: { maximum: 100, too_long: "%{count} characters is the maximum allowed" }
