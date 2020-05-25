@@ -2,7 +2,7 @@
 
 class Course < ApplicationRecord
   validates :day_length, presence: true
-  validates :course_id, uniqueness: true
+  validates :course_id, uniqueness: true, length: { maximum: 20, too_long: "%{count} characters is the maximum allowed" }
   validates :course_title, presence: true, format: { with: /\A[a-zA-Z]+\z/,
   message: "only allows letters" }, length: { maximum: 50, too_long: "%{count} characters is the maximum allowed" }
   validates :topic, presence: true, length: { maximum: 100, too_long: "%{count} characters is the maximum allowed" }
