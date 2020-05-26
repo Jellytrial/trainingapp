@@ -7,13 +7,13 @@
 <table table class="table table-striped">
   <thead>
     <tr>
-      <th>Course ID</th>
-      <th>Course title</th>
-      <th>Topic</th>
-      <th>Day length</th>
-      <th>Price</th>
-      <th>Level</th>
-      <th>Category</th>
+      <th>Course ID<%= sort_asc("course_id") %><%= sort_desc("course_id") %></th>
+      <th>Course title<%= sort_asc("course_title") %><%= sort_desc("course_title") %></th>
+      <th>Topic<%= sort_asc("topic") %><%= sort_desc("topic") %></th>
+      <th>Day length<%= sort_asc("day_length") %><%= sort_desc("day_length") %></th>
+      <th>Price<%= sort_asc("price") %><%= sort_desc("price") %></th>
+      <th>Level<%= sort_asc("level_id") %><%= sort_desc("level_id") %></th>
+      <th>Category<%= sort_asc("category") %><%= sort_desc("category") %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
