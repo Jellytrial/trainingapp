@@ -2,12 +2,13 @@
 
 class CoursesController < ApplicationController
   before_action :set_course, only: %i[show edit update destroy]
+  include CoursesHelper
 
   # GET /courses
   # GET /courses.json
   def index
     # @courses = Course.all
-    @courses = Course.paginate(page: params[:page], per_page: 15)
+    @courses = Course.paginate(page: params[:page], per_page: 15).order(sort_column + ' ' + sort_direction)
   end
 
   # GET /courses/1
