@@ -13,12 +13,13 @@ class ToppageController < ApplicationController
     else
       @keyword = params[:search].downcase
       split_keyword = @keyword.split(/[[:blank:]]+/)
-      @ikeyword_results = []
+      @keyword_results = []
       split_keyword.each do |kw|
         next if kw == ""         
-        @keyword_results = Course.all.where("lower(course_title) LIKE :search OR \
+        @keyword_results += Course.all.where("lower(course_title) LIKE :search OR \
                 lower(topic) LIKE :search OR lower(category) LIKE :search", search: "%#{kw}%").order(sort_column + ' ' + sort_direction)
       end
+      @keyword_results.uniq!
     end
   end
 
