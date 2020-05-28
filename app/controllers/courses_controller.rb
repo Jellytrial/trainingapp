@@ -65,7 +65,7 @@ class CoursesController < ApplicationController
 
   def course_restore
     @course = Course.with_discarded.discarded.find(params[:id]).undiscard
-    redirect_to courses_path
+    redirect_to deleted_path, notice: 'Course was successfully restored.'
   end
 
   def discarded
