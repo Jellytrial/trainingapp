@@ -69,7 +69,7 @@
                     <!---category search -->
                     <%= form_tag(cate_search_path, :method => "get") do%>
                         <!--name defines params-->
-                        <select name ="category_name" class="selectpicker show-tick form-control" title="Choose Category" data-live-search="true">   
+                        <select name ="category_name" data-size="10" class="selectpicker show-tick form-control" title="Choose Category" data-live-search="true">   
                             <% @cates.each do |cate| %>
                                 <li>
                                     <option ><%= cate.category %> </option>
