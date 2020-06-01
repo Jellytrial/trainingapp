@@ -15,7 +15,8 @@ class ToppageController < ApplicationController
       split_keyword = @keyword.split(/[[:blank:]]+/)
       @keyword_results = []
       split_keyword.each do |kw|
-        next if kw == ""         
+        next if kw == ''
+        
         @keyword_results += Course.all.where("lower(course_title) LIKE :search OR \
                 lower(topic) LIKE :search OR lower(category) LIKE :search", search: "%#{kw}%").order(sort_column + ' ' + sort_direction)
       end

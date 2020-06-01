@@ -66,6 +66,7 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'sunspot_solr'
 
 gem 'data-confirm-modal'
+gem 'discard'
 gem 'execjs'
 gem 'faker'
 gem 'jquery-rails'

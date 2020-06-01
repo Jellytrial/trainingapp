@@ -81,6 +81,8 @@ GEM
     crass (1.0.6)
     data-confirm-modal (1.6.3)
       railties (>= 3.0)
+    discard (1.2.0)
+      activerecord (>= 4.2, < 7)
     erubi (1.9.0)
     execjs (2.7.0)
     faker (2.11.0)
@@ -223,6 +225,7 @@ DEPENDENCIES
   byebug
   capybara (>= 2.15)
   data-confirm-modal
+  discard
   execjs
   faker
   jbuilder (~> 2.7)

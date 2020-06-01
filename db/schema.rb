@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_200_514_042_549) do
+ActiveRecord::Schema.define(version: 20_200_527_053_313) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(version: 20_200_514_042_549) do
     t.integer 'price', default: 0, null: false
     t.integer 'level_id'
     t.string 'category', limit: 40
+    t.datetime 'discarded_at'
+    t.index ['discarded_at'], name: 'index_course_on_discarded_at'
   end
 
   create_table 'courses', force: :cascade do |t|
@@ -49,6 +51,8 @@ ActiveRecord::Schema.define(version: 20_200_514_042_549) do
     t.string 'category'
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
+    t.datetime 'discarded_at'
+    t.index ['discarded_at'], name: 'index_courses_on_discarded_at'
   end
 
   create_table 'detail', primary_key: %w[orderno itemno], force: :cascade do |t|

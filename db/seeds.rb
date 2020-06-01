@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'faker'
 # frozen_string_literal: true
 # This file should contain all the record creation needed to seed the database with its default values.
@@ -13,8 +15,8 @@ require 'faker'
     course_title: Faker::Educator.unique.course_name,
     topic: Faker::Books::CultureSeries.culture_ship_class,
     day_length: Faker::Number.within(range: 1..100),
-    price: Faker::Number.within(range: 0..999999),
+    price: Faker::Number.within(range: 0..999_999),
     level_id: Faker::Number.within(range: 1..5),
     category: Faker::Educator.subject
-    )
+  )
 end
